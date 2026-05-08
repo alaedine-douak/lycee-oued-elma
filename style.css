@@ -302,7 +302,7 @@ li {
 }
 
 .nav-wrap {
-  gap: var(--spacing-lg);
+  /* gap: var(--spacing-lg);https://alaedine-douak.github.io/ */
   align-items: center;
   flex: 1;
   justify-content: flex-end;
