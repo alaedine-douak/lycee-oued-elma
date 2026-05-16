@@ -22,6 +22,7 @@
     />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">تخطى إلى المحتوى الرئيسي</a>
     <header class="site-header">
       <div
         class="container header-inner layout-flex content-justify_space-between gap1_5"
@@ -30,6 +31,7 @@
           <img
             src="./assets/lycee-oued-elma__logo.png"
             alt="Lycee Oued El-ma"
+            loading="lazy"
           />
           <div class="site-title">
             <h1>ثانوية الإخوة الشهداء مراح</h1>
@@ -54,7 +56,7 @@
 
           <ul class="social-list no-wrap layout-flex gap1">
             <li>
-              <a href="#" aria-label="Facebook" class="layout-flex">
+              <a href="https://www.facebook.com" aria-label="Facebook" class="layout-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
@@ -69,7 +71,7 @@
               </a>
             </li>
             <li>
-              <a href="#" aria-label="Instagram" class="layout-flex">
+              <a href="https://www.instagram.com" aria-label="Instagram" class="layout-flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#cfcfcf"
@@ -88,12 +90,13 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Hero Section -->
       <section
         class="hero"
         style="background-image: url(&quot;./assets/images/photo_1.jpeg&quot;)"
         aria-label="Hero"
+        role="img"
       >
         <div class="hero-overlay"></div>
         <div class="container hero-inner">
@@ -231,6 +234,99 @@
         </div>
       </section>
 
+      <!-- Guidance Counselor Section -->
+      <section id="guidance" class="guidance-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">مستشار التوجيه والإرشاد المدرسي والمهني</h2>
+            <p class="section-subtitle">
+              دعم متخصص لمساعدة التلاميذ في اختيار مسارهم الدراسي والمهني
+            </p>
+          </div>
+          <div class="guidance-content">
+            <div class="guidance-intro">
+              <p>
+                يحتاج التلميذ إلى مساعدة من عدة أطراف في جميع الظروف التي توفر له الاندماج في المجتمع الخاص به، ومن بين المساهمين في العملية نجد مستشار التوجيه والإرشاد المدرسي والمهني الذي يعمل على مساعدة التلميذ في اختياره للشعبة الدراسية التي تلائمه أو في اختياره للمهنة المناسبة له التي سيشغلها مستقبلاً والتي يجد فيها رغبته وراحته ويحقق فيها نجاحه وترقيته.
+              </p>
+              <p>
+                ونظراً إلى نقص المناهج الدراسية التي تناولناها في الجامعة وعدم تكييفها مع واقع هذا العمل ومتطلباته، وبما أن هذه المهنة تتطلب الوقوف على عدة جوانب في الميدان، قمنا بإجراء فترة تربص تحت إشراف مجموعة من العاملين في التخصص من أجل اكتساب الخبرات التي تخولنا لمعرفة دورنا كموجهين والعمل في هذه المهنة بما يتماشى مع الواقع وبالسير الحسن.
+              </p>
+            </div>
+
+            <div class="guidance-definition">
+              <h3>تعريف بمستشار التوجيه والإرشاد المدرسي</h3>
+              <p>
+                هو عضو من أعضاء المنظومة التربوية مثله مثل الأستاذ، المدير، والمفتش، يعمل لصالح التلاميذ والمنظومة التربوية.
+              </p>
+            </div>
+
+            <div class="guidance-missions">
+              <h3>مهام مستشار التوجيه والإرشاد المدرسي</h3>
+              <p>تتمثل مهامه في عدة محاور أهمها:</p>
+              <div class="missions-grid">
+                <article class="mission-card">
+                  <div class="mission-icon">🧭</div>
+                  <h4>التوجيه</h4>
+                  <p>مساعدة التلاميذ على اختيار الشعبة الدراسية والمهنة المناسبة لقدراتهم وميولهم.</p>
+                </article>
+                <article class="mission-card">
+                  <div class="mission-icon">📢</div>
+                  <h4>الإعلام</h4>
+                  <p>تقديم المعلومات اللازمة حول المسارات الدراسية والمهنية والتخصصات المتاحة.</p>
+                </article>
+                <article class="mission-card">
+                  <div class="mission-icon">📋</div>
+                  <h4>التقويم</h4>
+                  <p>تقويم قدرات التلاميذ وميولهم ومدى ملاءمتها للاختيارات المتاحة.</p>
+                </article>
+                <article class="mission-card">
+                  <div class="mission-icon">🤝</div>
+                  <h4>الإرشاد والتكفل بالتلاميذ</h4>
+                  <p>تقديم الدعم النفسي والتربوي للتلاميذ لمساعدتهم على تجاوز الصعوبات الدراسية.</p>
+                </article>
+              </div>
+            </div>
+            
+            <div class="guidance-services">
+              <h3>خدمات الإرشاد المدرسي</h3>
+              <div class="services-grid">
+                <article class="service-card">
+                  <div class="service-icon">📊</div>
+                  <h4>تقييم القدرات والميول</h4>
+                  <p>اختبارات وتقييمات لتحديد نقاط القوة والاهتمامات لدى التلاميذ</p>
+                </article>
+                <article class="service-card">
+                  <div class="service-icon">📅</div>
+                  <h4>جلسات إرشاد فردية</h4>
+                  <p>مقابلات شخصية لمساعدة التلاميذ على اتخاذ قرارات تعليمية صحيحة</p>
+                </article>
+                <article class="service-card">
+                  <div class="service-icon">👨‍🏫</div>
+                  <h4>ورش عمل للإرشاد</h4>
+                  <p>أنشطة جماعية لتعريف التلاميذ بالمسارات التعليمية والمهنية المختلفة</p>
+                </article>
+                <article class="service-card">
+                  <div class="service-icon">👨‍👩‍👧‍👦</div>
+                  <h4>التواصل مع الأهل</h4>
+                  <p>اجتماعات دورية مع أولياء الأمور لمناقشة تقدم التلاميذ ومهاراتهم</p>
+                </article>
+              </div>
+            </div>
+            
+            <div class="guidance-contact">
+              <h3>تواصل مع مستشار الإرشاد</h3>
+              <p>للحجز أو الاستفسار، يرجى التواصل مع مستشار الإرشاد المدرسي خلال أوقات الدوام:</p>
+              <div class="contact-details">
+                <p><strong>الأوقات:</strong> الأحد إلى الخميس، من 9:00 صباحاً إلى 3:00 مساءً</p>
+                <p><strong>المكان:</strong> مكتب الإرشاد، الطابق الأول</p>
+                <p><strong>البريد الإلكتروني:</strong> guidance@lycee-oued-elma.dz</p>
+              </div>
+              <a href="#contact" class="btn btn-primary">تواصل معنا</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section id="contact" class="contact-section">
         <div class="container">
@@ -261,7 +357,7 @@
                 <p>من 8:00 إلى 17:30</p>
               </div>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" action="mailto:lyceeouedelma@gmail.com" method="POST" enctype="text/plain">
               <div class="form-group">
                 <label for="name">الاسم الكامل</label>
                 <input type="text" id="name" name="name" required />
@@ -312,14 +408,17 @@
           <div class="footer-section">
             <h4>تابعنا</h4>
             <div class="footer-social layout-flex gap1">
-              <a href="#" aria-label="Facebook">فيسبوك</a>
-              <a href="#" aria-label="Instagram">إنستغرام</a>
-              <a href="#" aria-label="Twitter">تويتر</a>
+              <a href="https://www.facebook.com" aria-label="Facebook">فيسبوك</a>
+              <a href="https://www.instagram.com" aria-label="Instagram">إنستغرام</a>
+              <a href="https://www.twitter.com" aria-label="Twitter">تويتر</a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 ثانوية الإخوة الشهداء مراح. جميع الحقوق محفوظة.</p>
+          <p style="display: inline">
+            ثانوية الإخوة الشهداء مراح. جميع الحقوق محفوظة
+          </p>
+          <span>&copy; 2026</span>
         </div>
       </div>
     </footer>
