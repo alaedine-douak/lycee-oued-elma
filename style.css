@@ -101,6 +101,10 @@ body {
   overflow-x: hidden;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 /* Typography */
 h1,
 h2,
@@ -383,15 +387,18 @@ li {
 
 .site-nav {
   flex: 1;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .site-nav .nav-links {
   gap: var(--spacing-xl);
   justify-content: flex-end;
+  flex: 1;
 }
 
-.site-nav a {
+.site-nav .nav-links a {
   color: var(--gray-900);
   text-decoration: none;
   padding: var(--spacing-sm);
@@ -400,9 +407,13 @@ li {
   transition: all var(--transition-base);
 }
 
-.site-nav a:hover {
+.site-nav .nav-links a:hover {
   color: var(--primary);
   border-bottom-color: var(--primary);
+}
+
+.nav-overlay {
+  display: none;
 }
 
 .social-list {
@@ -680,13 +691,13 @@ li {
   position: relative;
 }
 
-.program-list li::before {
+/* .program-list li::before {
   content: "✓";
   position: absolute;
   right: -12px;
   color: var(--success);
   font-weight: bold;
-}
+} */
 
 /* ===== STATS SECTION ===== */
 .stats-section {
@@ -1152,27 +1163,125 @@ li {
 
   .nav-toggle {
     display: flex;
+    position: relative;
+    z-index: 110;
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 100;
+  }
+
+  .site-nav {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.97);
+    gap: var(--spacing-2xl);
+    opacity: 0;
+    transform: scale(0.94);
+    pointer-events: none;
+    transition:
+      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 105;
+    padding: var(--spacing-3xl) var(--spacing-xl);
   }
 
   .site-nav .nav-links {
-    display: none;
-    position: absolute;
-    right: var(--spacing-md);
-    top: 100%;
-    background: var(--white-color);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-xl);
-    flex-direction: column;
-    min-width: 250px;
-    z-index: 1000;
-  }
-
-  #nav-toggle:checked + .nav-toggle + .site-nav .nav-links {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    text-align: center;
+    list-style: none;
+    flex: 0;
   }
 
-  /* Focus within nav when open */
+  .site-nav .nav-links li {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  #nav-toggle:checked ~ .site-nav .nav-links li:nth-child(1) {
+    transition-delay: 0.05s;
+  }
+  #nav-toggle:checked ~ .site-nav .nav-links li:nth-child(2) {
+    transition-delay: 0.12s;
+  }
+  #nav-toggle:checked ~ .site-nav .nav-links li:nth-child(3) {
+    transition-delay: 0.19s;
+  }
+  #nav-toggle:checked ~ .site-nav .nav-links li:nth-child(4) {
+    transition-delay: 0.26s;
+  }
+
+  .site-nav .nav-links a {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    display: inline-block;
+    position: relative;
+    color: var(--gray-800);
+    border-bottom: none;
+  }
+
+  .site-nav .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  .site-nav .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .site-nav .nav-links a:hover {
+    color: var(--primary);
+  }
+
+  .site-nav .social-list {
+    margin-top: auto;
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  #nav-toggle:checked ~ .nav-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #nav-toggle:checked ~ .site-nav {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
+  #nav-toggle:checked ~ .site-nav .nav-links li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   #nav-toggle:focus-visible + .nav-toggle {
     outline: 3px solid var(--primary-light);
     outline-offset: 2px;
