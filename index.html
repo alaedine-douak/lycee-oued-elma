@@ -41,14 +41,15 @@
 
         <div class="layout-flex align-center nav-wrap gap1_5 no-wrap">
           <input id="nav-toggle" type="checkbox" />
-          <label for="nav-toggle" class="nav-toggle" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+          <label for="nav-toggle" class="nav-toggle">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </label>
           <nav class="site-nav" aria-label="Main navigation">
             <ul class="nav-links layout-flex gap1_5">
               <li><a href="#intro">المؤسسة</a></li>
+              <li><a href="#guidance">التوجيه</a></li>
               <li><a href="#programs">الأقسام</a></li>
               <li><a href="#contact">اتصل بنا</a></li>
             </ul>
@@ -56,7 +57,11 @@
 
           <ul class="social-list no-wrap layout-flex gap1">
             <li>
-              <a href="https://www.facebook.com" aria-label="Facebook" class="layout-flex">
+              <a
+                href="https://www.facebook.com"
+                aria-label="Facebook"
+                class="layout-flex"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
@@ -71,7 +76,11 @@
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com" aria-label="Instagram" class="layout-flex">
+              <a
+                href="https://www.instagram.com"
+                aria-label="Instagram"
+                class="layout-flex"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#cfcfcf"
@@ -104,7 +113,7 @@
             <h2>مرحباً بكم في ثانوية الإخوة الشهداء مراح</h2>
             <p class="lead">
               مؤسسة تعليمية متميزة تكرّس التفوق الدراسي وتنمية المهارات لدى
-              الشباب في وادي الماء. نسعى لبناء جيل من المفكرين والقادة.
+              الشباب. نسعى لبناء جيل من المفكرين والقادة.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#intro">تعرّف أكثر</a>
@@ -119,15 +128,13 @@
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">عن المؤسسة</h2>
-            <p class="section-subtitle">
-              تاريخ عريق من التميز والابتكار التربوي
-            </p>
+            <p class="section-subtitle">التميز والتفوق الدراسي مبدئنا</p>
           </div>
           <div class="about-content">
-            <div class="about-text">
+            <div class="about-text" style="text-align: center">
               <p>
-                تأسست ثانوية الإخوة الشهداء مراح كمؤسسة تعليمية رائدة في منطقة
-                وادي الماء، بهدف توفير تعليم جودة عالية يجمع بين الأصالة
+                تأسست ثانوية الإخوة الشهداء مراح كمؤسسة تعليمية رائدة في بلدية
+                وادي الماء، بهدف توفير تعليم بجودة عالية يجمع بين الأصالة
                 والحداثة.
               </p>
               <p>
@@ -148,7 +155,7 @@
                 <div class="feature-icon">🎯</div>
                 <h4>الأنشطة المتنوعة</h4>
                 <p>
-                  أنشطة ثقافية ورياضية لتعزيز المواهب والروح الجماعية والقيادة.
+                  أنشطة ثقافية ورياضية لتعزيز المواهب والروح الجماعية والقيادية.
                 </p>
               </article>
               <article class="feature-card">
@@ -174,7 +181,8 @@
             </p>
           </div>
           <div class="programs-grid">
-            <div class="program-card">
+            <div class="program-card fade-in">
+              <div class="program-icon" aria-hidden="true">🔬</div>
               <h3>القسم العلمي</h3>
               <p>
                 برنامج شامل في الرياضيات والعلوم الطبيعية والكيمياء والفيزياء.
@@ -185,7 +193,8 @@
                 <li>التسيير و الإقتصاد</li>
               </ul>
             </div>
-            <div class="program-card">
+            <div class="program-card fade-in">
+              <div class="program-icon" aria-hidden="true">📖</div>
               <h3>القسم الأدبي</h3>
               <p>برنامج متكامل في اللغات واﻷدب العربي والتاريخ والجغرافيا.</p>
               <ul class="program-list">
@@ -193,7 +202,8 @@
                 <li>اللغات الأجنبية</li>
               </ul>
             </div>
-            <div class="program-card">
+            <div class="program-card fade-in">
+              <div class="program-icon" aria-hidden="true">🎭</div>
               <h3>الأنشطة المدرسية</h3>
               <p>
                 برامج إثرائية متنوعة تطور مواهب التلاميذ خارج الفصول الدراسية.
@@ -227,7 +237,7 @@
               <p>معدل النجاح</p>
             </div>
             <div class="stat-card">
-              <h3 class="stat-number">22</h3>
+              <h3 class="stat-number">20+</h3>
               <p>سنة من التميز</p>
             </div>
           </div>
@@ -235,94 +245,124 @@
       </section>
 
       <!-- Guidance Counselor Section -->
-      <section id="guidance" class="guidance-section">
+      <section
+        id="guidance"
+        class="guidance-section"
+        aria-labelledby="guidance-heading"
+      >
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">مستشار التوجيه والإرشاد المدرسي والمهني</h2>
+            <h2 id="guidance-heading" class="section-title">
+              التوجيه والإرشاد المدرسي والمهني
+            </h2>
             <p class="section-subtitle">
               دعم متخصص لمساعدة التلاميذ في اختيار مسارهم الدراسي والمهني
             </p>
           </div>
           <div class="guidance-content">
-            <div class="guidance-intro">
-              <p>
-                يحتاج التلميذ إلى مساعدة من عدة أطراف في جميع الظروف التي توفر له الاندماج في المجتمع الخاص به، ومن بين المساهمين في العملية نجد مستشار التوجيه والإرشاد المدرسي والمهني الذي يعمل على مساعدة التلميذ في اختياره للشعبة الدراسية التي تلائمه أو في اختياره للمهنة المناسبة له التي سيشغلها مستقبلاً والتي يجد فيها رغبته وراحته ويحقق فيها نجاحه وترقيته.
-              </p>
-              <p>
-                ونظراً إلى نقص المناهج الدراسية التي تناولناها في الجامعة وعدم تكييفها مع واقع هذا العمل ومتطلباته، وبما أن هذه المهنة تتطلب الوقوف على عدة جوانب في الميدان، قمنا بإجراء فترة تربص تحت إشراف مجموعة من العاملين في التخصص من أجل اكتساب الخبرات التي تخولنا لمعرفة دورنا كموجهين والعمل في هذه المهنة بما يتماشى مع الواقع وبالسير الحسن.
-              </p>
-            </div>
+            <p class="guidance-lead">
+              تقديم التوجيه والإرشاد المدرسي والمهني لمساعدة كل تلميذ على اكتشاف
+              قدراته واختيار المسار الدراسي والمهني الأنسب له، من خلال خدمات
+              متنوعة تشمل التوجيه الأكاديمي والإعلام والتقويم والإرشاد النفسي.
+            </p>
 
-            <div class="guidance-definition">
-              <h3>تعريف بمستشار التوجيه والإرشاد المدرسي</h3>
+            <!-- <div class="guidance-definition">
+              <h3 id="guidance-definition-heading">
+                تعريف بمستشار التوجيه والإرشاد المدرسي
+              </h3>
               <p>
-                هو عضو من أعضاء المنظومة التربوية مثله مثل الأستاذ، المدير، والمفتش، يعمل لصالح التلاميذ والمنظومة التربوية.
+                هو عضو من أعضاء المنظومة التربوية مثله مثل الأستاذ، المدير،
+                والمفتش، يعمل لصالح التلاميذ والمنظومة التربوية.
               </p>
-            </div>
+            </div> -->
 
-            <div class="guidance-missions">
-              <h3>مهام مستشار التوجيه والإرشاد المدرسي</h3>
-              <p>تتمثل مهامه في عدة محاور أهمها:</p>
-              <div class="missions-grid">
-                <article class="mission-card">
-                  <div class="mission-icon">🧭</div>
-                  <h4>التوجيه</h4>
-                  <p>مساعدة التلاميذ على اختيار الشعبة الدراسية والمهنة المناسبة لقدراتهم وميولهم.</p>
-                </article>
-                <article class="mission-card">
-                  <div class="mission-icon">📢</div>
-                  <h4>الإعلام</h4>
-                  <p>تقديم المعلومات اللازمة حول المسارات الدراسية والمهنية والتخصصات المتاحة.</p>
-                </article>
-                <article class="mission-card">
-                  <div class="mission-icon">📋</div>
-                  <h4>التقويم</h4>
-                  <p>تقويم قدرات التلاميذ وميولهم ومدى ملاءمتها للاختيارات المتاحة.</p>
-                </article>
-                <article class="mission-card">
-                  <div class="mission-icon">🤝</div>
-                  <h4>الإرشاد والتكفل بالتلاميذ</h4>
-                  <p>تقديم الدعم النفسي والتربوي للتلاميذ لمساعدتهم على تجاوز الصعوبات الدراسية.</p>
-                </article>
-              </div>
+            <!-- <div class="guidance-missions"> -->
+            <!-- <h3 id="guidance-missions-heading"> -->
+            <!-- مهام مستشار التوجيه والإرشاد المدرسي -->
+            <!-- </h3> -->
+            <!-- <p>تتمثل مهامه في عدة محاور أهمها:</p> -->
+            <div class="missions-grid" role="list">
+              <article class="mission-card" role="listitem">
+                <div class="mission-icon" aria-hidden="true">🧭</div>
+                <h4>التوجيه</h4>
+                <p>
+                  مساعدة التلاميذ على اختيار الشعبة الدراسية والمهنة المناسبة
+                  لقدراتهم وميولهم.
+                </p>
+              </article>
+              <article class="mission-card" role="listitem">
+                <div class="mission-icon" aria-hidden="true">📢</div>
+                <h4>الإعلام</h4>
+                <p>
+                  تقديم المعلومات اللازمة حول المسارات الدراسية والمهنية
+                  والتخصصات المتاحة.
+                </p>
+              </article>
+              <article class="mission-card" role="listitem">
+                <div class="mission-icon" aria-hidden="true">📋</div>
+                <h4>التقويم</h4>
+                <p>
+                  تقويم قدرات التلاميذ وميولهم ومدى ملاءمتها للاختيارات المتاحة.
+                </p>
+              </article>
+              <article class="mission-card" role="listitem">
+                <div class="mission-icon" aria-hidden="true">🤝</div>
+                <h4>الإرشاد والتكفل بالتلاميذ</h4>
+                <p>
+                  تقديم الدعم النفسي والتربوي للتلاميذ لمساعدتهم على تجاوز
+                  الصعوبات الدراسية.
+                </p>
+              </article>
             </div>
-            
-            <div class="guidance-services">
-              <h3>خدمات الإرشاد المدرسي</h3>
-              <div class="services-grid">
-                <article class="service-card">
-                  <div class="service-icon">📊</div>
+            <!-- </div> -->
+
+            <!-- <div class="guidance-services">
+              <h3 id="guidance-services-heading">خدمات الإرشاد المدرسي</h3>
+              <div class="services-grid" role="list">
+                <article class="service-card" role="listitem">
+                  <div class="service-icon" aria-hidden="true">📊</div>
                   <h4>تقييم القدرات والميول</h4>
-                  <p>اختبارات وتقييمات لتحديد نقاط القوة والاهتمامات لدى التلاميذ</p>
+                  <p>
+                    اختبارات وتقييمات لتحديد نقاط القوة والاهتمامات لدى التلاميذ
+                  </p>
                 </article>
-                <article class="service-card">
-                  <div class="service-icon">📅</div>
+                <article class="service-card" role="listitem">
+                  <div class="service-icon" aria-hidden="true">📅</div>
                   <h4>جلسات إرشاد فردية</h4>
-                  <p>مقابلات شخصية لمساعدة التلاميذ على اتخاذ قرارات تعليمية صحيحة</p>
+                  <p>
+                    مقابلات شخصية لمساعدة التلاميذ على اتخاذ قرارات تعليمية
+                    صحيحة
+                  </p>
                 </article>
-                <article class="service-card">
-                  <div class="service-icon">👨‍🏫</div>
+                <article class="service-card" role="listitem">
+                  <div class="service-icon" aria-hidden="true">👨‍🏫</div>
                   <h4>ورش عمل للإرشاد</h4>
-                  <p>أنشطة جماعية لتعريف التلاميذ بالمسارات التعليمية والمهنية المختلفة</p>
+                  <p>
+                    أنشطة جماعية لتعريف التلاميذ بالمسارات التعليمية والمهنية
+                    المختلفة
+                  </p>
                 </article>
-                <article class="service-card">
-                  <div class="service-icon">👨‍👩‍👧‍👦</div>
+                <article class="service-card" role="listitem">
+                  <div class="service-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
                   <h4>التواصل مع الأهل</h4>
-                  <p>اجتماعات دورية مع أولياء الأمور لمناقشة تقدم التلاميذ ومهاراتهم</p>
+                  <p>
+                    اجتماعات دورية مع أولياء الأمور لمناقشة تقدم التلاميذ
+                    ومهاراتهم
+                  </p>
                 </article>
               </div>
-            </div>
-            
-            <div class="guidance-contact">
-              <h3>تواصل مع مستشار الإرشاد</h3>
+            </div> -->
+
+            <!-- <div class="guidance-contact">
+              <h3 id="guidance-contact-heading">تواصل مع مستشار الإرشاد</h3>
               <p>للحجز أو الاستفسار، يرجى التواصل مع مستشار الإرشاد المدرسي خلال أوقات الدوام:</p>
               <div class="contact-details">
                 <p><strong>الأوقات:</strong> الأحد إلى الخميس، من 9:00 صباحاً إلى 3:00 مساءً</p>
                 <p><strong>المكان:</strong> مكتب الإرشاد، الطابق الأول</p>
-                <p><strong>البريد الإلكتروني:</strong> guidance@lycee-oued-elma.dz</p>
+                <p><strong>البريد الإلكتروني:</strong> <a href="mailto:guidance@lycee-oued-elma.dz">guidance@lycee-oued-elma.dz</a></p>
               </div>
               <a href="#contact" class="btn btn-primary">تواصل معنا</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -344,20 +384,29 @@
               <div class="info-card">
                 <div class="info-icon">📞</div>
                 <h4>الهاتف</h4>
-                <p dir="ltr">033 33.89.79</p>
+                <p dir="ltr">033 33 89 79</p>
               </div>
               <div class="info-card">
                 <div class="info-icon">✉️</div>
                 <h4>البريد الإلكتروني</h4>
-                <p>lyceeouedelma@gmail.com</p>
+                <p>
+                  <a href="mailto:lyceeouedelma@gmail.com"
+                    >lyceeouedelma@gmail.com</a
+                  >
+                </p>
               </div>
               <div class="info-card">
                 <div class="info-icon">🕐</div>
                 <h4>ساعات العمل</h4>
-                <p>من 8:00 إلى 17:30</p>
+                <p>من 8:00 إلى 16:30</p>
               </div>
             </div>
-            <form class="contact-form" action="mailto:lyceeouedelma@gmail.com" method="POST" enctype="text/plain">
+            <form
+              class="contact-form"
+              action="mailto:lyceeouedelma@gmail.com"
+              method="POST"
+              enctype="text/plain"
+            >
               <div class="form-group">
                 <label for="name">الاسم الكامل</label>
                 <input type="text" id="name" name="name" required />
@@ -401,6 +450,7 @@
             <h4>الروابط السريعة</h4>
             <ul>
               <li><a href="#intro">عن المؤسسة</a></li>
+              <li><a href="#guidance">التوجيه</a></li>
               <li><a href="#programs">الأقسام</a></li>
               <li><a href="#contact">اتصل بنا</a></li>
             </ul>
@@ -408,8 +458,12 @@
           <div class="footer-section">
             <h4>تابعنا</h4>
             <div class="footer-social layout-flex gap1">
-              <a href="https://www.facebook.com" aria-label="Facebook">فيسبوك</a>
-              <a href="https://www.instagram.com" aria-label="Instagram">إنستغرام</a>
+              <a href="https://www.facebook.com" aria-label="Facebook"
+                >فيسبوك</a
+              >
+              <a href="https://www.instagram.com" aria-label="Instagram"
+                >إنستغرام</a
+              >
               <a href="https://www.twitter.com" aria-label="Twitter">تويتر</a>
             </div>
           </div>
@@ -422,5 +476,64 @@
         </div>
       </div>
     </footer>
+
+    <button
+      class="back-to-top"
+      aria-label="العودة إلى الأعلى"
+      title="العودة إلى الأعلى"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <script>
+      const backToTop = document.querySelector(".back-to-top");
+      const fadeElements = document.querySelectorAll(
+        ".mission-card, .service-card, .program-card, .guidance-definition, .guidance-missions, .guidance-contact",
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in-visible");
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
+
+      fadeElements.forEach((el) => {
+        el.classList.add("fade-in");
+        observer.observe(el);
+      });
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (window.scrollY > 400) {
+            backToTop.classList.add("visible");
+          } else {
+            backToTop.classList.remove("visible");
+          }
+        },
+        { passive: true },
+      );
+
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>
