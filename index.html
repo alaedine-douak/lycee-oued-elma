@@ -97,12 +97,27 @@
 
     <main id="main-content">
       <!-- Hero Section -->
-      <section
-        class="hero"
-        style="background-image: url(&quot;./assets/images/photo_1.jpeg&quot;)"
-        aria-label="Hero"
-        role="img"
-      >
+      <section class="hero" aria-label="Hero" role="img">
+        <div class="hero-slides">
+          <div
+            class="hero-slide active"
+            style="
+              background-image: url(&quot;./assets/images/photo_1.jpeg&quot;);
+            "
+          ></div>
+          <div
+            class="hero-slide"
+            style="
+              background-image: url(&quot;./assets/images/photo_2.jpeg&quot;);
+            "
+          ></div>
+          <div
+            class="hero-slide"
+            style="
+              background-image: url(&quot;./assets/images/photo_3.jpeg&quot;);
+            "
+          ></div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="container hero-inner">
           <div class="hero-content">
@@ -116,6 +131,29 @@
               <a class="btn btn-secondary" href="#contact">اتصل بنا</a>
             </div>
           </div>
+        </div>
+        <div class="hero-dots" role="tablist" aria-label="Slideshow navigation">
+          <button
+            class="hero-dot active"
+            role="tab"
+            aria-selected="true"
+            data-index="0"
+            aria-label="الصورة 1"
+          ></button>
+          <button
+            class="hero-dot"
+            role="tab"
+            aria-selected="false"
+            data-index="1"
+            aria-label="الصورة 2"
+          ></button>
+          <button
+            class="hero-dot"
+            role="tab"
+            aria-selected="false"
+            data-index="2"
+            aria-label="الصورة 3"
+          ></button>
         </div>
       </section>
 
@@ -545,6 +583,41 @@
       document
         .querySelector(".nav-overlay")
         .addEventListener("click", closeMenu);
+
+      // === Hero Slideshow ===
+      const slides = document.querySelectorAll(".hero-slide");
+      const dots = document.querySelectorAll(".hero-dot");
+      let currentIndex = 0;
+      let interval;
+
+      function goToSlide(index) {
+        slides.forEach((s) => s.classList.remove("active"));
+        dots.forEach((d) => d.classList.remove("active"));
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        goToSlide((currentIndex + 1) % slides.length);
+      }
+
+      function startAutoPlay() {
+        if (interval) clearInterval(interval);
+        interval = setInterval(nextSlide, 5000);
+      }
+
+      function stopAutoPlay() {
+        clearInterval(interval);
+      }
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          goToSlide(parseInt(dot.dataset.index));
+        });
+      });
+
+      startAutoPlay();
     </script>
   </body>
 </html>
